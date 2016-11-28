@@ -262,14 +262,15 @@ http://ulcommerce/api/v0.1/ulc_plus/01542e2b2bd0bba14/update-product
                     "stock": "10",
                     "make_id": "15"
                 }
-            ]
+            ],
+    "updateCollections" : 1
     }
 ```
 Al momento de realizar el envío de los datos para la creación del producto se debe tener en cuenta el [diccionario de datos de actualización de productos](#id-datosActPro).
 
 Para realizar la actualización de productos se debe tener en cuenta que se pueden actualizar uno o varios registros a partir de una sola petición a la API. 
 
-En este método se envían solamente los datos que desea actualizar en el registro (no es necesario enviar todos los datos del registro nuevamente en la petición).
+En este método se envían solamente los datos que desea actualizar en el registro (no es necesario enviar todos los datos del registro nuevamente en la petición), además de el valor de updateCollections el cual determina si se actualizará la base de datos de las tiendas directamente, esto se define para manejar la carga de la tienda.
 
 El siguiente modelo JSON aplica para la actualización de 2 registros, si se desea actualizar un registro o varios se debe modificar según la necesidad:
 
